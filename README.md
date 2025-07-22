@@ -86,7 +86,7 @@ struct MyMessage
 end
 
 message = File.open("path/to/encoded/protobuf") do |proto_io| # Get an IO to the file or data stream.
-  MyMessage.from_protobuf(proto_io) # returns an instance of `MyMessage`, assuming the file is valid protobuf.
+  MyMessage.from_protobuf(proto_io) 			      # returns an instance of `MyMessage`, assuming the file is valid protobuf.
 end
 
 message.to_protobuf # return an IO::Memory filled with the encoded message.
